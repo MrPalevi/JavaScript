@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance</title>
+</head>
+
+<body>
+
+    <script>
+        class Employee {
+
+            constructor(firstName) {
+                this.firstName = firstName;
+            }
+
+            sayHello(name) {
+                console.info(`Hello ${name}, My Name is ${this.name}`);
+            }
+        }
+
+
+        class Manager extends Employee {
+
+            constructor(firstName, lastName) {
+                super(firstName);
+                this.lastName = lastName;
+            }
+            sayHello(name) {
+                console.info(`Hello ${name}, My Name is ${this.firstName}`)
+            }
+        }
+
+        const budi = new Employee("Budi");
+        budi.sayHello("Joko");
+
+        const rid = new Manager("Ridwan");
+        rid.sayHello("Alawi");
+
+        console.info(budi);
+        console.info(rid);
+    </script>
+</body>
+
+</html>

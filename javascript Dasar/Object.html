@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        // Penulisan Objek Kosong
+        const mobil = {};
+
+        mobil["plat Nomer"] = "B 34451 AZ";
+        mobil["warna"] = "Hitam";
+        mobil["type"] = "Sedan";
+        mobil["Mesin"] = 1000;
+
+        console.table(mobil);
+        document.writeln(mobil);
+        console.info(`warna mobil : ${mobil.warna} `);
+
+        // penulisan objek di dalam objek
+        const motor = {
+
+            "plat Nomer": "F 3341 XX",
+            warna: "Merah",
+            type: "bebek",
+            mesin: 150
+        };
+
+        console.table(motor);
+    </script>
+</body>
+
+</html>

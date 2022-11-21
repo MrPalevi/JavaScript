@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghentikan Eksekusi dengan return</title>
+</head>
+
+<body>
+
+    <script>
+        function isContains(array, searchValue) {
+            for (const element of array) {
+                if (element === searchValue) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        const array = [1, 45, 789, 54, 21, 3, 89, 8, 9, 11];
+        const search = 11;
+        const found = isContains(array, search);
+        document.writeln(`<p>${found}</p>`);
+    </script>
+</body>
+
+</html>

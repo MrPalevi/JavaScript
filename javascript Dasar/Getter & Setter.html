@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter & Setter</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: "Moch",
+            middleName: "Ridwan",
+            lastName: "Alawi",
+
+            // tambahkan get
+            get fullName() {
+                return `${this.firstName} ${this.middleName} ${this.lastName}`;
+            },
+
+            // Untuk Menggunakan setter ada di baris sini
+            set fullName(value) {
+                const ary = value.split(" ");
+                this.firstName = ary[0];
+                this.middleName = ary[1];
+                this.lastName = ary[2];
+            }
+        };
+
+        //Pemanggilan Get Tanpa Setter
+        person.firstName = "M";
+        console.info(person.fullName);
+
+        //Pemanggilan Jika Menggunakan Set
+        person.fullName = "Budi Nugraha lagi";
+        console.table(person);
+
+        person.fullName = "Joko Tingkir dua";
+        console.table(person);
+
+        person.fullName = "Eko Saja lah";
+        console.table(person);
+    </script>
+</body>
+
+</html>

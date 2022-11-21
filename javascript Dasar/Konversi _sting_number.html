@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Srting & Number</title>
+</head>
+
+<body>
+    <script>
+        // parseInt(string)
+        // paeseFloat(string)
+        // Number(strng)
+        // number.toString()
+
+        const value1 = parseInt("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${sum}</p>`);
+
+
+        // Operasi NaN (Berarpapun Hasilnya Jika Varibel NaN akan tetap NaN)
+        const first = (Number("salah"));
+        const totalNumber = first + 100;
+        document.writeln(`<p>${totalNumber}</p>`);
+
+        // Pengecekan NaN
+        document.writeln(`<p>${isNaN(first)}</p>`);
+    </script>
+</body>
+
+</html>

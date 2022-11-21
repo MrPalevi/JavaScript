@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Instanceof</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+
+
+        }
+
+        // Gunakan (class Manager extands Employee)
+        // untuk melihat bahwa Manager adalah turunan dari Employee
+        class Manager {
+
+
+        }
+
+        const budi = new Employee();
+        const eko = new Manager();
+
+        console.info(typeof budi);
+        console.info(typeof eko);
+
+        // harusnya sperti ini
+        console.info(budi instanceof Employee);
+        console.info(eko instanceof Employee);
+
+        //Operator Instancof di class Inheritance
+        console.info(eko instanceof Employee);
+        console.info(eko instanceof Employee);
+    </script>
+</body>
+
+</html>

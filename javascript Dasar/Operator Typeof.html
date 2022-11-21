@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Typeof</title>
+</head>
+
+<body>
+    <script>
+        let data = "Ridwan";
+
+        if (typeof data === "number") {
+            alert("Number");
+        } else if (typeof data === "string") {
+            alert("String");
+        } else if (typeof data === "boolean") {
+            alert("boolean");
+        } else if (typeof data === "Object") {
+            alert("Object");
+        } else {
+            alert("tida tau");
+        }
+
+
+        let datas = 100;
+
+        const typeData = typeof datas;
+        document.writeln(`<p>${typeData}</p>`);
+    </script>
+</body>
+
+</html>

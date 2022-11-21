@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        {
+            // array Loop
+            const array = ["Moch", "Ridwan"];
+
+            array.forEach(function(value, index) {
+                console.info(`${index} : ${value}`);
+
+            });
+
+            array.forEach((value, index) => console.info(`${index} : ${value}`));
+
+            array.forEach(value => console.info(value));
+
+
+        } {
+            //array queque
+            let queque = [];
+
+            queque.push("Eko");
+            queque.push("Khannedy");
+            queque.push("Kurniawan");
+
+
+            console.info(queque.shift());
+            console.info(queque.shift());
+            console.info(queque.shift());
+
+
+        }
+
+        {
+            const stack = [];
+
+            stack.push("Moch");
+            stack.push("Ridwan");
+
+
+            console.info(stack.pop());
+            console.info(stack.pop());
+        } {
+            //array search
+
+            const source = [1, 2, 3, 4, 5];
+
+            console.info(source.find(value => value > 3));
+            console.info(source.findIndex(value => value > 3));
+        }
+
+        {
+
+        }
+    </script>
+</body>
+
+</html>

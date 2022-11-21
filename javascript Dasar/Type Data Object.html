@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Data Object</title>
+</head>
+
+<body>
+    <script>
+        const orang = {};
+
+
+        //ubah properti atribut
+        orang["nama"] = "Mochamad Ridwan";
+        orang["Alamat"] = "Cianjur";
+        orang["umur"] = 25;
+
+        console.table(orang);
+
+        //unruk menghapus atribut
+        delete orang["umur"];
+
+
+        console.table(orang);
+
+
+
+        const person = {
+            nama: "Mochamad Ridwan",
+            alamat: "Indonesia",
+            umur: 35
+        }
+
+        console.table(person);
+
+        //Untuk mengakses properti
+        console.info(`nama : ${person.nama}`);
+        console.info(`nama : ${person.alamat}`);
+        console.info(`nama : ${person.umur}`);
+    </script>
+</body>
+
+</html>

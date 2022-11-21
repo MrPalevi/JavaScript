@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+
+<body>
+    <script>
+        // data hanya berupa variabel = UNDIFINED
+        let name;
+
+        if (name === undefined) {
+            alert("UNDEFINED");
+
+        } else {
+            alert("DEFINED");
+        }
+
+
+        const names = ["Moch", "Ridwan"];
+        if (names[2] === undefined) {
+            console.info("ARRAY UNDIFINED")
+        } else {
+            console.info("ARRAY DEFINED")
+        }
+
+        // mengkases undifined di properti object
+        const person = {};
+        if (person.name == undefined) {
+            document.writeln("Object Undifined") // karna name blm di definisikan
+        } else {
+            document.writeln("Object Defined")
+        }
+    </script>
+</body>
+
+</html>

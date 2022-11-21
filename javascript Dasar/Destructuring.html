@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <script>
+        {
+            let names = ["Moch", "Ridwan", "Alawi", "budi", "joko"];
+            //Cara destructuring pada aray
+            let [firstName, middleName, lastName, ...other] = names;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            console.info(other);
+        }
+
+        {
+            let person = {
+                firstName: "Moch",
+                middleName: "Ridwan",
+                address: {
+                    street: "Jalan Setapak",
+                    city: "Cianjur",
+                    country: "Indonesia"
+                },
+                hobby: "Programer",
+                channel: "Bukan Yutuber"
+            };
+
+            let {
+                firstName,
+                middleName,
+                address,
+                ...other
+            } = person;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(address);
+            console.info(other);
+        }
+
+        // Destructuring Nested Object
+        {
+            let person = {
+                firstName: "Moch",
+                middleName: "Ridwan",
+                address: {
+                    street: "Jalan Setapak",
+                    city: "Cianjur",
+                    country: "Indonesia"
+                },
+                hobby: "Programer",
+                channel: "Bukan Yutuber"
+            };
+
+            let {
+                firstName,
+                middleName,
+                address: {
+                    country,
+                    city,
+                    street
+                },
+                ...other
+            } = person;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(city);
+            console.info(street);
+            console.info(street);
+            console.info(other);
+        }
+
+        {
+            // Destructuring Function Parameter
+            function displayPerson({
+                firstName,
+                middleName,
+                lastName
+            }) {
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+
+            }
+            const person = {
+                firstName: "Moch",
+                middleName: "Ridwan",
+                lastName: "Alawi"
+            };
+            displayPerson(person);
+        }
+
+        {
+            //Destructuring di function Parameter
+            function sum([first, secound]) {
+                return first + secound;
+            }
+            console.info(sum([1, 1]));
+            console.info(sum([10, 10]));
+        }
+
+        {
+
+            //Default Value Destructuring Array
+            const person = {
+
+                firstName: "Eko",
+                middleName: "budi",
+                lastName: "Khanedy"
+
+            };
+            //Bagian Default Value (MiddleName = "Kurniawan")
+            let {
+                firstName,
+                middleName = "Kurniawan",
+                lastName
+            } = person;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+
+        }
+    </script>
+</body>
+
+</html>
